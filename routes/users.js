@@ -8,11 +8,17 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/predict',(req,res,next)=>{
-  axios.get('https://smart-flask-list.herokuapp.com/ml/predict')
-    .then(res=>res.data)
-    .then(result=>res.render('automate',{
-      result:result
-    }))
+  // axios.get('https://smart-flask-list.herokuapp.com/ml/predict')
+  //   .then(res=>res.data)
+  //   .then(result=>res.render('automate',{
+  //     result:result
+  //   }))
+  res.render('automate')
+})
+
+router.get('/recommend',(req,res,next)=>
+{
+  res.render('recommend')
 })
 
 module.exports = router;
