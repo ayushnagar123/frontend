@@ -7,6 +7,10 @@
 var app = require('../app');
 var debug = require('debug')('frontend:server');
 var http = require('http');
+var bodyParser = require('body-parser')
+
+app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 /**
  * Get port from environment and store in Express.
